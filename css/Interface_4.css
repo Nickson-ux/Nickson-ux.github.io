@@ -1,0 +1,95 @@
+<style>
+                         *{
+                            margin: 0;
+                            padding: 0;
+                            }
+                        body{
+                        font-family: Arial, Helvetica, sans-serif;
+                        background-image: url(images/hackathon.jpeg);
+                        background-size: cover;
+                        background-position: center;
+                        }
+                        .container{
+                            width: 100%;
+                            margin: 0 auto;
+                            padding: 10px;
+                        }
+                    header{
+                        background-color: black;
+                        padding: 10px;
+                        position: fixed;
+                        width: 100%;
+                        top: 0;
+                        z-index: 1000;
+                    }
+                    header h1{
+                             float: left;
+                             margin-left: 2px;
+                             color: red;
+                             }
+                             nav ul{
+                            float: right;
+                            margin-right: 20px;
+                            list-style-type: none;
+                            }
+                             nav ul li{
+                             display: inline;
+                            margin-left: 15px;
+                            }
+                            nav ul li a{
+                            color: aquamarine;
+                            text-decoration: none;
+                            font-weight: bold;
+                            }
+                            nav ul li a:hover{
+                             color: blue;
+                            }
+                            .container{
+                                    color: aqua;
+                                }
+                                .container pre{
+                                    font-size: 20px;
+                                    margin: 0;
+                                }
+                                    .container{
+                                        text-align: center;
+                                        margin-top: none;
+                                    }
+                                    .form-container{
+                                        max-width: 10px;
+                                        margin: 0 auto;
+                                        padding: 5%;
+                                        background-color: red;
+                                        border-radius: 3%;
+                                        box-shadow: 0 0 10px black;
+                                    }
+                                            table{
+                                                width: 100%;
+                                                border-collapse: collapse;
+                                                margin-bottom: 20px;
+                                            }
+                                            th, td{
+                                                border: 1px solid black;
+                                                padding: 10px;
+                                                text-align: left;
+                                            }
+                                            th{
+                                                background-color: aquamarine;
+                                            }
+                                            nav ul{
+                                                list-style-type:none;
+                                                padding: 10px;
+                                                background-color: black;
+                                                overflow: hidden;
+                                            }
+                                          
+                                    footer{
+                                background-color: black;
+                                color: aqua;
+                                text-align: center;
+                                padding: 10px;
+                                position: absolute;
+                                width: 100%;
+                                bottom: 0;
+                            }
+                </style>

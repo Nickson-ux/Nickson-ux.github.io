@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+    <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Reach Us-CyberQ Academy</title>
+                        <style>
+                            body {
+                            font-family: Arial, sans-serif;
+                            background-image: url(images/contactus.jpeg);
+                            padding: 20px;
+                                }
+                            .container {
+                            max-width: 600px;
+                            background-color: aqua;
+                            padding: 20px;
+                            border-radius: 8px;
+                            box-shadow: 0 0 10px black;
+                            margin: 0 auto;
+                            }
+                            h2 {
+                                text-align: center;
+                                color: #333;
+                            }
+                            form {
+                                margin-top: 20px;
+                            }
+                            label {
+                                display: block;
+                                margin-bottom: 8px;
+                                color: #666;
+                            }
+                                input[type="text"], input[type="email"], input[type="tel"], textarea {
+                                width: calc(100% - 20px);
+                                padding: 10px;
+                                margin-bottom: 15px;
+                                border: 1px solid #ccc;
+                                border-radius: 4px;
+                                font-size: 16px;
+                            }
+                            input[type="radio"] {
+                            margin-right: 5px;
+                            }
+                            textarea {
+                                height: 150px;
+                            }
+                            input[type="submit"] {
+                            background-color: blue;
+                            color: white;
+                            padding: 12px 20px;
+                            border: none;
+                            border-radius: 4px;
+                            cursor: pointer;
+                            font-size: 16px;
+                            }
+                            input[type="submit"]:hover {
+                            background-color: red;
+                            }
+                        </style>
+                                <style>
+                                        p{
+                                            color: red;
+                                            font-size: 24px;
+                                            font-weight: bold;
+                                        }
+                                    footer {
+                                    background-color: none;
+                                    color: white;
+                                    text-align: center;
+                                    padding: 20px;
+                                    position: fixed;
+                                    bottom: 0;
+                                    width: 150%;
+                                    }
+                                    .container a:hover {
+                                    color: blue; 
+                                    }
+                                </style>
+            </head>
+        <body>
+            <div class="container">
+                <h1><b>Connect with:: CyberQ Academy Today!</b></h1>
+            </div>
+                <div class="container">
+                        We are always here to answer your questions and help you withyour inquiries.<br>
+                        Whether you are interested in attending our next hackathon, looking for more<br> 
+                        information about our organization or just having a suggestion. Our team is<br>
+                        here to help. For a quicker response, please use the form below to reach out<br> 
+                        us. We look forward to hearing from you!
+                </div>
+        
+                <div class="container">
+                    <h2>Reach-Out: CyberQ Academy</h2>
+                    <form action="#" method="post">
+                            <label for="fullname">Full Name:</label>
+                            <input type="text" id="fullname" name="fullname" required>
+
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+
+                            <label for="phone">Phone No.:</label>
+                            <input type="tel" id="phone" name="phone" required>
+
+                            <label>What is it About?</label>
+                            <input type="radio" id="event_queries" name="topic" value="event_queries">
+                            <label for="event_queries">Event Queries</label>
+                        <br>
+                            <input type="radio" id="event_feedback" name="topic" value="event_feedback">
+                            <label for="event_feedback">Event Feedback</label>
+                        <br>
+                            <input type="radio" id="consultation" name="topic" value="consultation">
+                            <label for="consultation">Consultation</label>
+                            <br>
+
+                            <label for="message">Your Message:</label>
+                            <textarea id="message" name="message" required></textarea>
+
+                            <input type="submit" value="Submit Your Message">
+                    </form>
+                </div>
+
+    <script>
+        // JavaScript for additional validation
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            let errorMessages = '';
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const age = document.getElementById('age').value;
+
+            if (username.length < 3) {
+                errorMessages += 'Username must be at least 3 characters long.<br>';
+            }
+
+            // Check if the email is valid using a regex pattern (optional, since HTML5 handles it)
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailPattern.test(email)) {
+                errorMessages += 'Please enter a valid email address.<br>';
+            }
+
+            if (age < 18 || age > 99) {
+                errorMessages += 'Age must be between 18 and 99.<br>';
+            }
+
+            if (errorMessages) {
+                document.getElementById('errorMessages').innerHTML = errorMessages;
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+    </script>
+                    <p><b>Welcome to CyberQ Academy</b></p>
+                    <footer>
+                        <div class="container">
+                            <a href="Interface_1.html">Home</a>
+                            <a href="Interface_2.html">Register</a>
+                            <a href="Interface_3.html">About Us</a>
+                            <a href="Interface_4.html">Events</a>
+                            <a href="Interface_5.html">Contact Us</a>
+                        </div>
+                    </footer>
+
+        </body>
+</html>

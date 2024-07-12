@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register</title>
+<style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                background-image: url(images/reg.jpg);
+                background-size: cover;
+                background-position: center;
+            }
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        padding: 20px;
+    }
+    .form-container {
+        max-width: 600px;
+        background-color: aqua;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        margin: 0 auto;
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    .form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="tel"],
+    .form-group input[type="email"],
+    .form-group select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid black;
+        border-radius: 4px;
+        font-size: 12px;
+    }
+    .form-group input[type="radio"] {
+        margin-right: 10px;
+    }
+    .form-group .radio-label {
+        margin-right: 20px;
+    }
+    .form-group .select-wrapper {
+        position: relative;
+    }
+    .form-group .select-wrapper select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        padding-right: 30px;
+        background: url('https://cdn.jsdelivr.net/gh/encharm/Font-Awesome-SVG-PNG/black/png/24/angle-down.png') no-repeat right center;
+        background-size: 15px;
+    }
+    .form-group .submit-btn {
+        background-color: blue;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .form-group .submit-btn:hover {
+        background-color: red;
+    }
+</style>
+        <style>
+               body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                }
+                    footer {
+                    background-color: #000;
+                    color: #fff;
+                    text-align: center;
+                    padding: 20px;
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    }
+                        .container{
+                            color: red;
+                        }
+                footer a {
+                color: aqua;
+                text-decoration: none;
+                margin: 0 10px;
+                transition: color 0.3s ease;
+                }
+                    footer a:hover {
+                        color: blue; 
+                    }
+        </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Registration Form</h2>
+    <form action="/submit-your-form-handler" method="post">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label>Gender:</label><br>
+            <div class="radio-label">
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+            </div>
+            <div class="radio-label">
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Female</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="occupation">Occupation:</label>
+            <div class="select-wrapper">
+                <select id="occupation" name="occupation" required>
+                    <option value="">Select Occupation</option>
+                    <option value="student">Student</option>
+                    <option value="lecturer">Lecturer</option>
+                    <option value="engineer">Engineer</option>
+                    <option value="technician">IT technician</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="submit-btn">Register</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    // JavaScript for additional validation
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+        let errorMessages = '';
+        const username = document.getElementById('username').value;
+        const email = document.getElementById('email').value;
+        const age = document.getElementById('age').value;
+
+        if (username.length < 3) {
+            errorMessages += 'Username must be at least 3 characters long.<br>';
+        }
+
+        // Check if the email is valid using a regex pattern (optional, since HTML5 handles it)
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        if (!emailPattern.test(email)) {
+            errorMessages += 'Please enter a valid email address.<br>';
+        }
+
+        if (age < 18 || age > 99) {
+            errorMessages += 'Age must be between 18 and 99.<br>';
+        }
+
+        if (errorMessages) {
+            document.getElementById('errorMessages').innerHTML = errorMessages;
+            event.preventDefault(); // Prevent form submission
+        }
+    });
+</script>
+            <footer>
+                    <div class="container">
+                        <h1>CyberQ Academy</h1>
+                    </div>
+                <a href="Interface_1.html">Home</a>
+                <a href="Interface_2.html">Register</a>
+                <a href="Interface_3.html">About Us</a>
+                <a href="Interface_4.html">Events</a>
+                <a href="Interface_5.html">Contact Us</a>
+            </footer>
+</body>
+</html>
